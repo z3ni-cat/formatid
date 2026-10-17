@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formatid"
+version = "0.1.0"
+description = "Pustaka format file bisnis Indonesia: DBF (e-SPT), backup Accurate & Zahir (Firebird)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Rizki & assistant"}]
+keywords = ["dbf", "dbase", "accurate", "zahir", "firebird", "indonesia", "e-spt", "pajak", "accounting"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.setuptools.packages.find]
+include = ["formatid*"]
+
+[project.optional-dependencies]
+firebird = ["fdb>=2.0"]
